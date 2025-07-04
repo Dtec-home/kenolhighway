@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenol Highway Youth Forum</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        
+        .poster {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            padding: 25px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .emoji-crown {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-3px); }
+        }
+        
+        .title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .date-box {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .date-box::before {
+            content: '📅';
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .date-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        .date-reminder {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .main-message {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .main-message::before {
+            content: '🤔';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 2.5rem;
+            opacity: 0.4;
+        }
+        
+        .main-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .action-section {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 15px;
+            position: relative;
+        }
+        
+        .action-section::before {
+            content: '🚀';
+            position: absolute;
+            top: -8px;
+            right: 15px;
+            font-size: 2rem;
+            animation: rocket 3s infinite;
+        }
+        
+        @keyframes rocket {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        
+        .action-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .form-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 1rem;
+        }
+        
+        .form-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .footer-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .decorative-corner {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.2rem;
+            opacity: 0.6;
+            animation: spin 10s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="decorative-corner">🎯</div>
+        
+        <div class="header">
+            <div class="emoji-crown">👑</div>
+            <h1 class="title">Young Legends!</h1>
+            <p class="subtitle">Kenol Highway District Youth Forum</p>
+        </div>
+        
+        <div class="date-box">
+            <div class="date-text">July 12th, 2025</div>
+            <div class="date-reminder">Mark your calendars! 📢</div>
+        </div>
+        
+        <div class="main-message">
+            <div class="main-text">
+                Got burning questions? Wild ideas? 🔥<br>
+                Submit your topics NOW!
+            </div>
+        </div>
+        
+        <div class="action-section">
+            <div class="action-text">
+                Don't just complain - participate! 
+            </div>
+            <a href="https://forms.gle/Fo67RUWeWKtq3Bpt9" target="_blank" class="form-button">
+                🚀 Submit Your Topic!
+            </a>
+        </div>
+        
+        <div class="footer-note">
+            (Yes, we accept questions about potholes & budget mysteries! 💰)
+        </div>
+    </div>
+</body>
+</html>
